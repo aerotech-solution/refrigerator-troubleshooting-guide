@@ -6,6 +6,12 @@ Not every problem means you need a major repair. Sometimes, the cause is somethi
 
 This guide covers a few common refrigerator problems, what might be causing them, and when it's better to call a professional.
 
+## Interactive Refrigerator Troubleshooting Checklist
+
+Prefer a step-by-step approach? Try our [free interactive refrigerator troubleshooting checklist](https://aerotech-solution.github.io/refrigerator-troubleshooting-guide/refrigerator-checklist.html).
+
+It covers common cooling problems, water leaks, unusual noises, and ice maker issues, with simple safety-focused checks and a progress tracker.
+
 ## 1. Your Refrigerator Isn't Cooling Properly
 
 If your fridge is running but the food inside doesn't feel as cold as it should, start with the basics.
