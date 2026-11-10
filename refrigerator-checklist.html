@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free interactive refrigerator troubleshooting checklist covering cooling problems, water leaks, unusual noises, and ice maker issues.">
+  <title>Refrigerator Troubleshooting Checklist</title>
+  <style>
+    :root {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #263445;
+      background: #f4f7fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #153b60;
+      color: white;
+      padding: 38px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 5vw, 38px);
+    }
+
+    header p {
+      max-width: 680px;
+      margin: auto;
+      color: #e2edf5;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 0 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 26px;
+      border-radius: 12px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 14px rgba(0,0,0,.06);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #153b60;
+    }
+
+    label { cursor: pointer; }
+
+    select {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 13px;
+      font: inherit;
+      border: 1px solid #a8b7c8;
+      border-radius: 7px;
+      background: white;
+    }
+
+    .warning {
+      background: #fff6e7;
+      border-left: 5px solid #c78024;
+    }
+
+    .check {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 15px 0;
+      border-bottom: 1px solid #e8edf2;
+    }
+
+    .check:last-child { border-bottom: 0; }
+
+    input[type="checkbox"] {
+      width: 21px;
+      height: 21px;
+      flex-shrink: 0;
+      margin-top: 4px;
+      accent-color: #15745b;
+      cursor: pointer;
+    }
+
+    .check strong { display: block; }
+
+    .check small {
+      display: block;
+      color: #586677;
+      font-size: 14px;
+      margin-top: 3px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 16px;
+      margin: 12px 0;
+      accent-color: #15745b;
+    }
+
+    button, .service-link {
+      display: inline-block;
+      background: #153b60;
+      color: white;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 7px;
+      font: inherit;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button:hover, .service-link:hover {
+      background: #245b86;
+    }
+
+    .note {
+      color: #586677;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #667382;
+      font-size: 14px;
+    }
+
+    [hidden] { display: none !important; }
+
+    @media (max-width: 600px) {
+      .card { padding: 19px; }
+    }
+
+    @media print {
+      body { background: white; }
+      header { background: white; color: black; }
+      header p { color: black; }
+      .card { box-shadow: none; border: 1px solid #ddd; }
+      button { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Refrigerator Troubleshooting Checklist</h1>
+  <p>
+    Not sure what's wrong with your refrigerator?
+    Start with a few simple, safe checks before deciding
+    whether you need a repair technician.
+  </p>
+</header>
+
+<main>
+
+  <div class="card warning">
+    <strong>Safety first</strong>
+    <p>
+      This checklist covers basic observations and
+      manufacturer-approved maintenance only.
+      Do not open electrical panels, handle refrigerant,
+      bypass safety devices, or work on powered components.
+      If you notice smoke, burning smells, damaged wiring,
+      or water near electrical equipment, stop using the
+      appliance and seek qualified assistance.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>1. What's happening with your refrigerator?</h2>
+
+    <label for="problem">
+      Select the problem you're experiencing:
+    </label>
+
+    <select id="problem">
+      <option value="cooling">Refrigerator not cooling</option>
+      <option value="water">Water leaking</option>
+      <option value="noise">Unusual noises</option>
+      <option value="ice">Ice maker not working</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h2>2. Work through the checklist</h2>
+    <p>
+      Tick each item after you've checked it.
+      You don't need to take the refrigerator apart.
+    </p>
+
+    <section data-problem="cooling">
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Check the temperature setting</strong>
+          <small>
+            Confirm the refrigerator is set to 40°F (4°C)
+            or below, following your model's instructions.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Check the air vents</strong>
+          <small>
+            Make sure containers and food packages aren't
+            blocking airflow inside the refrigerator.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Inspect the door seal</strong>
+          <small>
+            Look for dirt, visible damage, or anything
+            preventing the door from closing fully.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Measure the actual temperature</strong>
+          <small>
+            Use an appliance thermometer rather than
+            relying only on the control-panel display.
+          </small>
+        </span>
+      </label>
+    </section>
+
+    <section data-problem="water" hidden>
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Look for visible moisture</strong>
+          <small>
+            Check whether water is collecting inside
+            the refrigerator or underneath it.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Inspect the door seal</strong>
+          <small>
+            Check whether the door closes properly
+            and the gasket is clean.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Check the water filter</strong>
+          <small>
+            If your refrigerator has one, confirm it
+            was installed according to the manual.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Identify where the leak begins</strong>
+          <small>
+            Note whether it appears near the dispenser,
+            ice maker, or another accessible area.
+            Do not disassemble the appliance.
+          </small>
+        </span>
+      </label>
+    </section>
+
+    <section data-problem="noise" hidden>
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Check whether the refrigerator is level</strong>
+          <small>
+            An uneven refrigerator can sometimes
+            create vibration or rattling.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Look for nearby objects</strong>
+          <small>
+            Check whether containers or items outside
+            the refrigerator are vibrating against it.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Describe the sound</strong>
+          <small>
+            Is it humming, clicking, rattling, or grinding?
+            Note when it occurs.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Check cooling performance</strong>
+          <small>
+            If the unusual noise comes with poor cooling,
+            professional inspection may be necessary.
+          </small>
+        </span>
+      </label>
+    </section>
+
+    <section data-problem="ice" hidden>
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Check whether the ice maker is on</strong>
+          <small>
+            Some models have a separate switch
+            or control-panel setting.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Check the freezer temperature</strong>
+          <small>
+            The recommended freezer temperature
+            is 0°F (-18°C).
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Inspect the ice bin</strong>
+          <small>
+            Look for visible ice buildup or an
+            obstruction without forcing any parts.
+          </small>
+        </span>
+      </label>
+
+      <label class="check">
+        <input type="checkbox">
+        <span>
+          <strong>Check the water supply and filter</strong>
+          <small>
+            Follow the manufacturer's instructions
+            for checking accessible connections.
+          </small>
+        </span>
+      </label>
+    </section>
+  </div>
+
+  <div class="card">
+    <h2>3. Your progress</h2>
+
+    <p id="status" aria-live="polite">
+      0 of 4 checks completed
+    </p>
+
+    <progress
+      id="progress"
+      class="progress-bar"
+      value="0"
+      max="4">
+    </progress>
+
+    <p id="result" class="note">
+      Complete the relevant checks and note any symptoms
+      that continue.
+    </p>
+
+    <button id="reset" type="button">
+      Reset this checklist
+    </button>
+  </div>
+
+  <div class="card">
+    <h2>When should you call a technician?</h2>
+
+    <p>
+      If your refrigerator still isn't working properly
+      after basic checks, a professional can investigate
+      the underlying problem without unnecessary guesswork.
+    </p>
+
+    <p>
+      Aero Tech Solution Inc provides refrigerator repair
+      services in Bolingbrook, Illinois, and surrounding
+      service areas.
+    </p>
+
+    <a
+      class="service-link"
+      href="https://aerotechsolutioninc.com/services/refrigerator-repair/"
+      target="_blank"
+      rel="noopener">
+      Learn About Refrigerator Repair Services
+    </a>
+
+    <p class="note">
+      This checklist offers general information and
+      does not replace the appliance manufacturer's
+      instructions or professional diagnosis.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  Informational resource prepared for Aero Tech Solution Inc.
+  <p>
+    <a href="https://aerotechsolutioninc.com/">
+      Visit Aero Tech Solution Inc
+    </a>
+  </p>
+</footer>
+
+<script>
+  const problem = document.getElementById("problem");
+  const sections = document.querySelectorAll(
+    "section[data-problem]"
+  );
+  const progress = document.getElementById("progress");
+  const status = document.getElementById("status");
+  const result = document.getElementById("result");
+  const reset = document.getElementById("reset");
+
+  function activeSection() {
+    return document.querySelector(
+      'section[data-problem="' + problem.value + '"]'
+    );
+  }
+
+  function updateProgress() {
+    const checks = activeSection().querySelectorAll(
+      'input[type="checkbox"]'
+    );
+
+    const total = checks.length;
+    const completed = Array.from(checks).filter(
+      checkbox => checkbox.checked
+    ).length;
+
+    progress.max = total;
+    progress.value = completed;
+
+    status.textContent =
+      completed + " of " + total + " checks completed";
+
+    if (completed === total) {
+      result.textContent =
+        "You've completed the basic checks. If the problem " +
+        "continues, consider arranging professional diagnosis.";
+    } else {
+      result.textContent =
+        "Keep working through the checklist. " +
+        "Only perform checks that are safe for your appliance.";
+    }
+  }
+
+  function showProblem() {
+    sections.forEach(section => {
+      section.hidden =
+        section.dataset.problem !== problem.value;
+    });
+
+    updateProgress();
+  }
+
+  document.querySelectorAll(
+    'input[type="checkbox"]'
+  ).forEach(checkbox => {
+    checkbox.addEventListener("change", updateProgress);
+  });
+
+  problem.addEventListener("change", showProblem);
+
+  reset.addEventListener("click", () => {
+    activeSection().querySelectorAll(
+      'input[type="checkbox"]'
+    ).forEach(checkbox => {
+      checkbox.checked = false;
+    });
+
+    updateProgress();
+  });
+
+  showProblem();
+</script>
+
+</body>
+</html>
